@@ -108,4 +108,5 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_REVIEWS);
         onCreate(db);
     }
+
 }

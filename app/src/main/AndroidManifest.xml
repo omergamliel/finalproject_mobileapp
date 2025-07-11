@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject_mobileApp">
         <activity
+            android:name=".activities.Inside_activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Homepage_activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Register_activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

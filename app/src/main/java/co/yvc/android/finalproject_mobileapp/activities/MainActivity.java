@@ -1,4 +1,4 @@
-package co.yvc.android.finalproject_mobileapp;
+package co.yvc.android.finalproject_mobileapp.activities;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import co.yvc.android.finalproject_mobileapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
