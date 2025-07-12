@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_view_photos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragements.Photos_fragment">
+    android:padding="20dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- כותרת למעלה באמצע -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="צפייה בתמונות"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp" />
+
+            <!-- שורה: כפתור תאריך פעילות + Spinner תחום פעילות -->
+            <LinearLayout
+                android:id="@+id/filterByDateOrFieldLinLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <!-- תחום פעילות -->
+                <Spinner
+                    android:id="@+id/activityFieldSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/fields"
+                    />
+
+                <Space
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+
+                <!-- כפתור תאריך פעילות -->
+                <Button
+                    android:id="@+id/dateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="תאריך פעילות" />
+
+            </LinearLayout>
+
+
+            <!-- בחירת שם פעילות לצפייה בתמונות מאותה הפעילות -->
+            <Spinner
+                android:id="@+id/spinnerActivityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
+
+<!--צפייה בתמונות מפעילויות- הורה וחניך נגישים -->
+
+

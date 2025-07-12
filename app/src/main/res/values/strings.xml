@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">finalProject_mobileApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--מערך אפשרויות בחירת תפקיד של המשתמש -->
+    <string-array name="jobs_array">
+        <item>מנהל על</item>
+        <item>רכז</item>
+        <item>מדריך</item>
+        <item>הורה</item>
+        <item>חניך</item>
+    </string-array>
+
+
+
 </resources>
