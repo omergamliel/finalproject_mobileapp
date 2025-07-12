@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_upload_photo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragements.Addphoto_fragment">
+    android:padding="24dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        <LinearLayout
+            android:id="@+id/uploadPhotoLinLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
 
+            <TextView
+                android:id="@+id/uploadTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="העלאת תמונה"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+            <!-- כפתור תאריך -->
+            <Button
+                android:id="@+id/dateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="בחירת תאריך תמונה"
+                android:layout_marginBottom="16dp" />
+
+            <!-- כפתור בחירת תמונה -->
+            <Button
+                android:id="@+id/selectImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="בחירת תמונה מהגלריה"
+                android:layout_marginBottom="16dp" />
+
+            <!-- כפתור שלח -->
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="שלח"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
 </FrameLayout>
+
+<!--העלאת תמונה מגלריית הנייד של המשתמש אל האפליקציה- עבור מדריך -->
