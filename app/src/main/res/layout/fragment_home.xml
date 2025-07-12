@@ -3,12 +3,150 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     tools:context=".fragements.Home_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+        <!-- שורת כפתורים ראשונה של כפתורי פרגמנטים -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- כפתור מדריכים -->
+            <Button
+                android:id="@+id/button_guides"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="מדריכים"
+                android:textSize="11sp"
+                android:padding="0dp" />
+
+            <!-- כפתור שיוך מדריך -->
+            <Button
+                android:id="@+id/button_assign"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:text="שיוך מדריך"
+                android:textSize="11sp"
+                android:padding="0dp" />
+
+            <!-- כפתור הוספת פעילות -->
+            <Button
+                android:id="@+id/button_addactivity"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:text="הוספת פעילות"
+                android:textSize="11sp"
+                android:padding="0dp" />
+
+            <!-- כפתור תמונות -->
+            <Button
+                android:id="@+id/button_photos"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:text="תמונות"
+                android:textSize="11sp"
+                android:padding="0dp" />
+
+            <!-- כפתור ביקורת עבור ילד של הורה (חניך) -->
+            <Button
+                android:id="@+id/button_childreview"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:text="ביקורת ילד"
+                android:textSize="11sp"
+                android:padding="0dp" />
+        </LinearLayout>
+
+            <!--שורה שניה של גיל, תיאור, מספר משתתפים מקסימלית ובחירת תחום -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- שדה להזנת גיל החניך -->
+                <EditText
+                    android:id="@+id/age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="גיל החניך"
+                    android:textSize="10sp" />
+
+                <!-- שדה להזנת תיאור הפעילות -->
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="תיאור הפעילות"
+                    android:textSize="10sp" />
+
+                <!-- שדה להזנת מספר משתתפים מקסימלי -->
+                <EditText
+                    android:id="@+id/maxparticipants"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="מספר משתתפים מקס'"
+                    android:textSize="10sp" />
+
+                <!-- Spinner לבחירת תחום פעילות -->
+                <Spinner
+                    android:id="@+id/fields"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/fields"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <!-- שורה שלישית של ימים פנויים, 10 פעילויות הכי פופולריות ומיון לפי כמות משתתפים (חניכים) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- כפתור לבחירת ימים פנויים -->
+                <Button
+                    android:id="@+id/button_filter_days"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="ימים פנויים"
+                    android:textSize="10sp" />
+
+                <!-- כפתור להצגת 10 פעילויות הכי פופולריות -->
+                <Button
+                    android:id="@+id/button_top_10"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="10 הכי פופולריות"
+                    android:textSize="10sp" />
+
+                <!-- כפתור למיון לפי כמות משתתפים -->
+                <Button
+                    android:id="@+id/button_sortparticipants"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="מיון כמות משתתפים"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
 </FrameLayout>
