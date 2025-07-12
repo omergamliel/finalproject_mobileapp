@@ -5,10 +5,44 @@
     android:layout_height="match_parent"
     tools:context=".fragements.Review_fragement">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ratingtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="הוספת ביקורת"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <RatingBar
+            android:id="@+id/ratingstars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/ratingwords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ביקורת מילולית"/>
+
+        <Button
+            android:id="@+id/ratingsavebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="שמירה"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+
+
 
 </FrameLayout>

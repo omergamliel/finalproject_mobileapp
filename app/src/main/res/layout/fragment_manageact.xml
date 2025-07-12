@@ -4,11 +4,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragements.Manageact_fragment">
+    <!-- פרגמנט הוספה/עריכת פעילות-->
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="הוספה/עריכת פעילות"
+                android:textSize="24dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/activity_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="שם פעילות"/>
+            <EditText
+                android:id="@+id/activity_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="תיאור פעילות"/>
+            <EditText
+                android:id="@+id/activity_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="תחום פעילות"/>
+            <EditText
+                android:id="@+id/activity_minage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="גיל מינימלי לפעילות"/>
+            <EditText
+                android:id="@+id/activity_maxage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="גיל מקסימלי לפעילות"/>
+
+            <Button
+                android:id="@+id/activity_daysinweek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="בחירת ימי הפעילות"
+                android:layout_gravity="right"/>
+
+            <EditText
+                android:id="@+id/activity_maxpersons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="כמות משתתפים מקסימלית"/>
+            <Button
+                android:id="@+id/activity_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="בחירת תאריך"/>
+            <Spinner
+                android:id="@+id/activity_instructor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="בחירת מדריך הפעילות"/>
+            <Spinner
+                android:id="@+id/activity_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/activity_status"/>
+            <Button
+                android:id="@+id/savebtn"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="שמירה"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

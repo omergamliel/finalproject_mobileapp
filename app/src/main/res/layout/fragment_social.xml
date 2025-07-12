@@ -1,14 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_social_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragements.Social_fragment">
+    android:padding="20dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/registerSocialLinLayout">
+
+            <!-- כותרת הרשמה לפעילות מסוג חברה -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="הרשמה לפעילות חברה"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:id="@+id/maxParticipantsLinLayout">
+
+                <!-- שדה להזנת כמות משתתפים מקסימלית -->
+                <EditText
+                    android:id="@+id/maxParticipantsEditText"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="מספר" />
+
+                <!-- טקסט כמות -->
+                <TextView
+                    android:id="@+id/maxParticipantsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="כמות משתתפים מקסימלית"
+                    android:textDirection="rtl"
+                    android:textSize="16sp"
+                    />
+
+            </LinearLayout>
+
+            <!-- סינון לפי תיאור הפעילות -->
+            <TextView
+                android:id="@+id/descriptionFilterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="סינון לפי תיאור הפעילות"
+                android:textSize="16sp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/activityDescriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="הקלד תיאור"
+                android:inputType="text"
+                android:gravity="right"
+                android:textDirection="rtl" />
+
+            <LinearLayout
+                android:id="@+id/filterByAgeOrDaysLinLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <Button
+                    android:id="@+id/chooseDaysButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="סינון לפי ימים פנויים"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"/>
+
+                <!-- כפתור סינון לפי גיל המשתמש - יוצגו פעילויות שתואמות לגילו -->
+                <Button
+                    android:id="@+id/ageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="סינון לפי גיל" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
+
+<!--רישום חניך לפעילות מסוג חברה -->
