@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">finalProject_mobileApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="activity_status">
+        <item>גרוע</item>
+        <item>בסדר</item>
+        <item>מעולה</item>
+    </string-array>
 </resources>

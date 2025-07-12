@@ -7,38 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
+    <!-- this is the first page to connect to the application -->
+
 
     <TextView
+        android:gravity="center"
         android:id="@+id/maintitle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="ברוכים הבאים למרכז המחקר המדעי!"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="30dp"
+        android:textStyle="bold"
         />
 
     <EditText
         android:id="@+id/loginmail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="מייל"/>
+        android:layout_height="wrap_content"
+        android:hint="מייל"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maintitle"/>
 
     <EditText
         android:id="@+id/loginpassword"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="סיסמא"/>
+        android:layout_height="wrap_content"
+        android:hint="סיסמא"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginmail"/>
 
     <Button
         android:id="@+id/loginbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="התחבר"/>
+        android:text="התחבר"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginpassword"/>
 
     <Button
         android:id="@+id/regbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="הרשמה"/>
+        android:text="הרשמה"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn"/>
 
 
 
